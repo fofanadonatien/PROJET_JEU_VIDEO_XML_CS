@@ -1,4 +1,3 @@
-
 Bonjour !
 
 Pour ce jeu, la taille de la fenêtre de l'écran se change dans
@@ -9,10 +8,14 @@ Mais si cela n'est pas possible le jeu devrait normalement s'adapter pour un éc
 Pour Sauvegarder (par Serialization), il est nécéssaire de mettre échap pour quitter le jeu !
 La sauvegarde se fait automatiquement sinon.
 
-
 Bonne partie
 
-
+EXPLICATION D'UN POTENTIEL BUG AU LANCEMENT (RUN) DU JEU :
+Si vous avez un message d’erreur indiquant : « Ce fichier provient d’un autre ordinateur et a éventuellement été bloqué pour protéger cet ordinateur »,
+pas de panique !
+Il suffit d’aller dans votre explorateur de fichiers et d’accéder au fichier mentionné dans l’erreur (probablement « dotnet-tools.json »).
+Faites un clic droit dessus > Propriétés > cochez la case « Débloquer » en bas à droite de la fenêtre, puis appliquez.
+Normalement, lorsque vous relancerez le jeu, tout devrait fonctionner.
 
 
 
@@ -56,4 +59,4 @@ mettre l'evenement dans le if  (eventNum == 2 ), ici cela imprime une autre imag
                                 TextureBonus,
                                 new Rectangle(0, 0, largeurImage, hauteurImage),
                                 Color.White
-                            );          
+                            );    
