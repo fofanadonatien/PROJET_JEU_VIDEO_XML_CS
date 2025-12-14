@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:sj="https://www.univ-grenoble-alpes.fr/l3miage2"
+        targetNamespace="https://www.univ-grenoble-alpes.fr/l3miage2"
+        elementFormDefault="qualified">
+
+    <element name="dataCombat" type="sj:DataCombat"/>
+
+    <complexType name="DataCombat">
+        <sequence>
+            <element name="CAperso" type="int"/>
+            <element name="CAmonstre" type="int"/>
+            <element name="viePerso" type="int"/>
+            <element name="vieMonstre" type="int"/>
+            <element name="degatsPerso" type="int"/>
+            <element name="degatsMonstre" type="int"/>
+        </sequence>
+    </complexType>
+
+</schema>

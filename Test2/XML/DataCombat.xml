@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataCombat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="https://www.univ-grenoble-alpes.fr/l3miage2">
+  <CAperso>18</CAperso>
+  <CAmonstre>12</CAmonstre>
+  <viePerso>25</viePerso>
+  <vieMonstre>26</vieMonstre>
+  <degatsPerso>10</degatsPerso>
+  <degatsMonstre>5</degatsMonstre>
+</dataCombat>

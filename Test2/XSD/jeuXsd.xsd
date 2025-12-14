@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:se="https://github.com/team-phoenix/strange-expedition"
+        targetNamespace="https://github.com/team-phoenix/strange-expedition"
+        elementFormDefault="qualified">
+
+
+    <element name="Jeu" type="se:Jeu"/>
+    <complexType name="Jeu">
+        <sequence>
+            <element name="nomJeu" type="string"/>
+            <element name="fondImage" type="string"/>
+            <element name="joueur" type="se:Joueur"/>
+            <element name="sauvegarde" type="se:sauvegarde" minOccurs="0"/>
+            <element name="map" type="se:Map"/>
+            <element name="score" type="se:TypeScore"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Joueur">
+        <sequence>
+            <element name="nom" type="se:NomJoueur"/>
+            <element name="vie" type="se:TypeVie"/>
+            <element name="inventaire" type="se:TypeInventaire"/>
+        </sequence>
+    </complexType>
+    <complexType name="Map">
+        <sequence>
+            <element name="donjon" type="se:Donjons"/>
+            <element name="fondImage" type="string"/>
+            <element name="objet" type="se:Objets" maxOccurs="unbounded"/>
+            <element name="pnj" type="se:PNJ" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="TypeInventaire">
+        <sequence>
+            <element name="piece" type="int" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="objet" type="se:Objets" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="Donjons">
+        <choice>
+            <element name="donjonDevinette" type="se:DonjonDevinette"/>
+            <element name="donjonZombie" type="se:DonjonZombie"/>
+        </choice>
+    </complexType>
+    <complexType name="PNJ">
+        <choice>
+            <element name="sorcierPnj" type="se:SorcierPNJ"/>
+            <element name="zombiePnj" type="se:ZombiePNJ"/>
+        </choice>
+    </complexType>
+    <complexType name="sauvegarde">
+        <sequence>
+            <element name="nom" type="se:NomJoueur"/>
+            <element name="vie" type="se:TypeVie"/>
+            <element name="inventaire" type="se:TypeInventaire"/>
+            <element name="donjon" type="se:Donjons"/>
+        </sequence>
+    </complexType>
+    <complexType name="Objets">
+        <sequence>
+            <element name="arme" type="se:Armes"/>
+            <element name="consommable" type="se:Consommables"/>
+        </sequence>
+    </complexType>
+    <complexType name="DonjonDevinette">
+        <sequence>
+            <element name="decor" type="string" minOccurs="0"/>
+            <element name="difficulte" type="se:TypeDifficulte"/>
+            <element name="question" type="se:Questions" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="DonjonZombie">
+        <sequence>
+            <element name="decor" type="string" minOccurs="0"/>
+            <element name="difficulte" type="se:TypeDifficulte"/>
+        </sequence>
+    </complexType>
+    <complexType name="SorcierPNJ">
+        <sequence>
+            <element name="nom" type="string"/>
+            <element name="role" type="string"/>
+            <element name="dialogue" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="ZombiePNJ">
+        <sequence>
+            <element name="nom" type="string"/>
+            <element name="role" type="string"/>
+            <element name="dialogue" type="string"/>
+            <element name="PointVie" type="int"/>
+            <element name="degats" type="se:TypeDegats"/>
+        </sequence>
+    </complexType>
+    <complexType name="Armes">
+        <sequence>
+            <element name="nom" type="string"/>
+            <element name="description" type="string"/>
+            <element name="degats" type="se:TypeDegats"/>
+        </sequence>
+    </complexType>
+    <complexType name="Consommables">
+        <sequence>
+            <element name="nom" type="string"/>
+            <element name="description" type="string"/>
+            <element name="effet" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="Questions">
+        <sequence>
+            <element name="texte" type="string"/>
+            <element name="propositions" type="se:ListePropositions"/>
+            <element name="bonneReponse" type="string"/>
+            <element name="mauvaiseReponse" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="ListePropositions">
+        <sequence>
+            <element name="Proposition" type="string" maxOccurs="4"/>
+        </sequence>
+    </complexType>
+    <!-- Nom du joueur : 4 lettres + 2 chiffres (LéoP12) -->
+    <simpleType name="NomJoueur">
+        <restriction base="string">
+            <pattern value="[A-Za-zÀ-ÿ]{4}[0-9]{2}"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="TypeVie">
+        <restriction base="int">
+            <minInclusive value="100"/>
+            <maxInclusive value="200"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="TypeDegats">
+        <restriction base="int">
+            <minInclusive value="25"/>
+            <maxInclusive value="100"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="TypeDifficulte">
+        <restriction base="int">
+            <minInclusive value="1"/>
+            <maxInclusive value="5"/>
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="TypeScore">
+        <restriction base="int">
+            <minInclusive value="0"/>
+            <maxInclusive value="9999"/>
+        </restriction>
+    </simpleType>
+</schema>

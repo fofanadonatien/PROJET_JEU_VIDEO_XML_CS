@@ -1,0 +1,157 @@
+@startuml
+package team-phoenix/strange-expedition{
+' ===================== CLASSE PRINCIPALE =====================
+class Jeu {
+  - nomJeu : string
+  - fondImage : string 
+  - joueur : Joueur
+  - sauvegarde : Sauvegarde [0..1]
+  - map : Map
+  - score : int
+}
+
+' ===================== JOUEUR =====================
+class Joueur {
+  - nom : NomJoueur
+  - vie : TypeVie
+  - inventaire : Inventaire
+}
+
+class Sauvegarde {
+  - nom : NomJoueur
+  - vie : TypeVie
+  - inventaire : Inventaire
+  - donjon : Donjon
+}
+
+class Inventaire {
+  - piece : int [0..*]
+  - objet : Objet [0..*]
+}
+
+' ===================== OBJETS =====================
+class Objet {
+  - arme : Arme
+  - consommable : Consommable
+}
+
+class Arme {
+  - nom : string
+  - description : string
+  - degats : TypeDegats
+}
+
+class Consommable {
+  - nom : string
+  - description : string
+  - effet : string
+}
+
+' ===================== MAP =====================
+class Map {
+  - donjon : Donjon
+  - fondImage : string
+  - objet : Objet 
+  - pnj : PNJ 
+}
+
+' ===================== DONJONS =====================
+class Donjon {
+  - donjonDevinette : DonjonDevinette
+  - donjonZombie : DonjonZombie
+}
+
+class DonjonDevinette {
+  - decor : string
+  - difficulte : TypeDifficulte
+  - question : Question 
+}
+
+class DonjonZombie {
+  - decor : string
+  - difficulte : TypeDifficulte
+}
+
+' ===================== QUESTIONS =====================
+class Question {
+  - texte : string
+  - propositions : ListePropositions
+  - bonneReponse : string
+}
+
+class ListePropositions {
+  - Proposition : string [4]
+}
+
+' ===================== PNJ =====================
+class PNJ {
+  - sorcierPnj : SorcierPNJ
+  - zombiePnj : ZombiePNJ
+}
+
+class SorcierPNJ {
+  - nom : string
+  - role : string
+  - dialogue : string
+}
+
+class ZombiePNJ {
+  - nom : string
+  - role : string
+  - dialogue : string
+  - PointVie : int
+  - degats : TypeDegats
+}
+
+' ===================== TYPES SIMPLES =====================
+class NomJoueur {
+  + pattern : [A-Za-zÀ-ÿ]{4}[0-9]{2}
+}
+
+class TypeVie {
+  + minInclusive : 100
+  + maxInclusive : 200
+}
+
+class TypeDegats {
+  + minInclusive : 25
+  + maxInclusive : 100
+}
+
+class TypeDifficulte {
+  + minInclusive : 1
+  + maxInclusive : 5
+}
+
+class TypeScore {
+  + minInclusive : 0
+  + maxInclusive : 9999
+}
+
+' ===================== RELATIONS =====================
+Jeu "1" *-- "1" Joueur
+Jeu "1" *-- "0..1" Sauvegarde
+Jeu "1" *-- "1" Map
+Jeu "1" *-- "1" TypeScore
+
+Joueur "1" *-- "1" Inventaire
+Sauvegarde "1" *-- "1" Inventaire
+Sauvegarde "1" *-- "1" Donjon
+
+Inventaire "1" *-- "0..*" Objet
+Objet "1" *-- "1" Arme
+Objet "1" *-- "1" Consommable
+
+Map "1" *-- "1" Donjon
+Map "1" *-- "1..*" Objet
+Map "1" *-- "1..*" PNJ
+
+Donjon "1" *-- "0..1" DonjonDevinette
+Donjon "1" *-- "0..1" DonjonZombie
+DonjonDevinette "1" *-- "1..*" Question
+Question "1" *-- "1" ListePropositions
+
+PNJ "1" *-- "0..1" SorcierPNJ
+PNJ "1" *-- "0..1" ZombiePNJ
+}
+@enduml

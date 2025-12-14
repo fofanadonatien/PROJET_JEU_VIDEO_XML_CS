@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<joueur xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" nom="Joueur" xmlns="https://www.univ-grenoble-alpes.fr/l3miage">
+  <vie>3</vie>
+  <xpscore>0</xpscore>
+  <plume>1</plume>
+  <armure>1</armure>
+</joueur>

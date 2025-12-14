@@ -1,0 +1,74 @@
+<Jeu xmlns="https://github.com/team-phoenix/strange-expedition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/team-phoenix/strange-expedition ../xsd/jeuXsd.xsd">
+    <nomJeu>Strange Expedition</nomJeu>
+    <fondImage>images/fond_temple_xml.png</fondImage>
+    <joueur>
+        <nom>LéoP12</nom>
+        <vie>150</vie>
+        <inventaire>
+            <piece>0</piece>
+        </inventaire>
+    </joueur>
+    <map>
+        <donjon>
+            <donjonDevinette>
+                <decor>lieux/auberge.jpg</decor>
+                <difficulte>1</difficulte>
+                <!--  questions  -->
+                <question>
+                    <texte>Que signifie l'acronyme XML ?</texte>
+                    <propositions>
+                        <Proposition> 1 - Extensible Markup Language (W)</Proposition>
+                        <Proposition> 2 - Example Markup List (X)</Proposition>
+                        <Proposition> 3 - Extra Modern Language (C)</Proposition>
+                        <Proposition> 4 - Extended Meta Logic (V)</Proposition>
+                    </propositions>
+                    <bonneReponse>W</bonneReponse>
+                    <mauvaiseReponse>XCV</mauvaiseReponse>
+                </question>
+                <question>
+                    <texte>Quel est le role d'un schema XSD ?</texte>
+                    <propositions>
+                        <Proposition> 1 - Decrire la structure et les types de donnees d'un document XML (W)</Proposition>
+                        <Proposition> 2 - Afficher le contenu XML dans un navigateur (X)</Proposition>
+                        <Proposition> 3 - Convertir XML en JSON (C)</Proposition>
+                        <Proposition> 4 - Verifier les balises HTML (V)</Proposition>
+                    </propositions>
+                    <bonneReponse>W</bonneReponse>
+                    <mauvaiseReponse>XCV</mauvaiseReponse>
+                </question>
+                <question>
+                    <texte>Quelle instruction permet de relier un XML a un schema XSD ?</texte>
+                    <propositions>
+                        <Proposition> 1 - xsd:link (W)</Proposition>
+                        <Proposition> 2 - xsi:schemaLocation (X)</Proposition>
+                        <Proposition> 3 - xmlns:xsd (C)</Proposition>
+                        <Proposition> 4 - xml:schemaRef (V)</Proposition>
+                    </propositions>
+                    <bonneReponse>X</bonneReponse>
+                    <mauvaiseReponse>WCV</mauvaiseReponse>
+                </question>
+            </donjonDevinette>
+        </donjon>
+        <fondImage>images/carte_donjon_xml.png</fondImage>
+        <objet>
+            <arme>
+                <nom>Plume du Sage</nom>
+                <description>Un artefact magique permettant de taper plus fort</description>
+                <degats>25</degats>
+            </arme>
+            <consommable>
+                <nom>Potion de Savoir</nom>
+                <description>Améliore temporairement la compréhension des ennemis et donc </description>
+                <effet>+5 classe Armure</effet>
+            </consommable>
+        </objet>
+        <pnj>
+            <sorcierPnj>
+                <nom>Archivus</nom>
+                <role>Sorcier</role>
+                <dialogue>Bienvenue, jeune apprenti ! Réponds correctement à mes devinettes sur XML pour avancer dans ton apprentissage.</dialogue>
+            </sorcierPnj>
+        </pnj>
+    </map>
+    <score>0</score>
+</Jeu>

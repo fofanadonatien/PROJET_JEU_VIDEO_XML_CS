@@ -1,0 +1,24 @@
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.deps.json
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.AssemblyReference.cache
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfoInputs.cache
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfo.cs
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\refint\MonoGameLibrary.dll
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\Pierr\OneDrive\Documents\Test2\MonoGameLibrary\obj\Debug\net8.0\ref\MonoGameLibrary.dll
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.deps.json
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.AssemblyReference.cache
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfoInputs.cache
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfo.cs
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.dll
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\refint\MonoGameLibrary.dll
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.pdb
+C:\Users\donat\OneDrive\Bureau\data\mes cours\UGA\L3\S5\FD XML\TP projet\jeux video\JEU_VIDEO_XML_CS_EQUIPE_4PERS\Test2\MonoGameLibrary\obj\Debug\net8.0\ref\MonoGameLibrary.dll

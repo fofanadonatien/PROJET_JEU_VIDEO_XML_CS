@@ -1,0 +1,81 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary;
+
+namespace Test2;
+
+public class Game1 : Game
+{
+    private GraphicsDeviceManager _graphics;
+    private SpriteBatch _spriteBatch;
+    private Texture2D _logo;
+    private Texture2D _mont;
+
+    public Game1()
+    {
+        _graphics = new GraphicsDeviceManager(this);
+        Content.RootDirectory = "Content";
+        IsMouseVisible = true;
+    }
+
+    protected override void Initialize()
+    {
+        // TODO: Add your initialization logic here
+
+        base.Initialize();
+    }
+
+    protected override void LoadContent()
+    {
+        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        _mont = Content.Load<Texture2D>("images/mont");
+        _logo = Content.Load<Texture2D>("images/logo");
+
+        // TODO: use this.Content to load your game content here
+    }
+
+    protected override void Update(GameTime gameTime)
+    {
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
+            Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
+
+        // TODO: Add your update logic here
+
+        base.Update(gameTime);
+    }
+
+    protected override void Draw(GameTime gameTime)
+    {
+        GraphicsDevice.Clear(Color.CornflowerBlue);
+
+        // TODO: Add your drawing code here
+
+        // Begin the sprite batch to prepare for rendering.
+        _spriteBatch.Begin();
+
+        // Draw the logo texture
+        _spriteBatch.Draw(_mont, Vector2.Zero, Color.White);
+        _spriteBatch.Draw(
+            _logo, // texture
+            new Vector2( // position
+                (Window.ClientBounds.Width * 0.5f) - (_logo.Width * 0.5f),
+                (Window.ClientBounds.Height * 0.5f) - (_logo.Height * 0.5f)),
+            null, // sourceRectangle
+            Color.White, // color
+            1.0f, // rotation
+            Vector2.Zero, // origin
+            0.5f, // scale
+            SpriteEffects.None, // effects
+            0.0f // layerDepth
+        );
+
+
+        // Always end the sprite batch when finished.
+        _spriteBatch.End();
+
+        base.Draw(gameTime);
+    }
+
+}

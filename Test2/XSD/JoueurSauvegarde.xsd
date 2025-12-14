@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<schema version="1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:sj="https://www.univ-grenoble-alpes.fr/l3miage"
+        targetNamespace="https://www.univ-grenoble-alpes.fr/l3miage"
+        elementFormDefault="qualified">
+
+    <element name="joueur" type="sj:joueur"/>
+
+    <complexType name="joueur">
+        <sequence>
+            <element name="vie" type="int"/>
+            <element name="xpscore" type="int"/>
+            <element name="plume" type="int"/>
+            <element name="armure" type="int"/>
+        </sequence>
+        <attribute name="nom" type="string"/>
+    </complexType>
+</schema>
